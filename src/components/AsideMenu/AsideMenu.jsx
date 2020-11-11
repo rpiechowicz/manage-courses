@@ -14,7 +14,8 @@ const ADMIN_TYPE = 1
 const AsideMenu = () => {
 	const { user } = useContext(StoreContext)
 
-	const adminMenuComponent = user?.user.accessLevel === ADMIN_TYPE ? <AdminMenu /> : null
+	const adminMenuComponent = user && user.accessLevel === ADMIN_TYPE ? <AdminMenu /> : null
+	console.log(adminMenuComponent)
 
 	return (
 		<section className={style()}>

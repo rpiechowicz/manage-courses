@@ -7,16 +7,18 @@ import { default as AisdeMenuStyles } from '../AsideMenu.module.scss'
 const style = bemCssModules(AisdeMenuStyles)
 
 const AdminMenu = () => {
-	;<>
-		<p className={style('title')}>Panel administratora</p>
-		<nav>
-			<ul>
-				<li className={style('link')}>
-					<Link to="/manage-courses">Zarzadzanie kursami</Link>
-				</li>
-			</ul>
-		</nav>
-	</>
+	return (
+		<>
+			<p className={style('title')}>Panel administratora</p>
+			<nav>
+				<ul>
+					<li className={style('link')}>
+						<Link to="/manage-courses">Zarzadzanie kursami</Link>
+					</li>
+				</ul>
+			</nav>
+		</>
+	)
 }
 
 export default AdminMenu
